@@ -1,0 +1,44 @@
+name: acf
+description: A new Flutter project.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.2 <3.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  connectivity_plus: ^2.3.0
+  cupertino_icons: ^1.0.2
+  dartz: ^0.10.1
+  intl:
+  qr_flutter:
+  flutter_bloc: ^8.0.1
+  get_it: ^7.2.0
+  injectable: ^1.5.3
+  validators:
+  google_fonts: ^3.0.1
+  flutter_svg: ^1.1.6
+  video_player: ^2.4.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/
+  fonts:
+    - family: "CircularStd"
+      fonts:
+        - asset: assets/fonts/CircularStd-Book.ttf
+        - asset: assets/fonts/CircularStd-Medium.ttf
+          weight: 400
+        - asset: assets/fonts/CircularStd-Bold.ttf
+          weight: 600
+        - asset: assets/fonts/CircularStd-Black.ttf
+          weight: 800
