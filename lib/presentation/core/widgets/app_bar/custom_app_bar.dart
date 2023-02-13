@@ -49,7 +49,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
         width: double.infinity,
         color: isTransparent ? Colors.transparent : Colors.black,
         padding: EdgeInsets.only(
-          top: rh(40),
+          top: rh(50),
           left: space3x,
           right: space3x,
         ),
@@ -114,6 +114,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
                     alignment: Alignment.centerRight,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         CIcons.fromMaterial(
                           size: 25,
@@ -146,7 +147,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size(double.infinity, 50);
+  Size get preferredSize => const Size(double.infinity, 40);
 }
 
 class AppBarIcon extends StatelessWidget {
