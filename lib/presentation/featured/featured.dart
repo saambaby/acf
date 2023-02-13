@@ -13,7 +13,8 @@ class _FeaturedState extends State<Featured> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Container(
+    return Padding(
+      padding: EdgeInsets.only(top: rh(10) ),
       child: SingleChildScrollView(
           child: Column(
         children: [
@@ -76,7 +77,7 @@ class _FeaturedState extends State<Featured> {
                       color: Theme.of(context).primaryColor),
                 ),
                 //Sermon scrollview
-                ScrollViewContainer(size: size)
+                ScrollViewContainer(size: size, data: [],)
               ],
             ),
           ),
@@ -139,7 +140,45 @@ class _FeaturedState extends State<Featured> {
                       color: Theme.of(context).primaryColor),
                 ),
                 //Sermon scrollview
-                ScrollViewContainer(size: size)
+                ScrollViewContainer(size: size, data: [],)
+              ],
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: rw(20)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Recent Acf Youth Messages',
+                  textAlign: TextAlign.start,
+                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                      fontWeight: FontWeight.w900,
+                      height: 1,
+                      fontSize: rh(15),
+                      color: Theme.of(context).primaryColor),
+                ),
+                //Sermon scrollview
+                ScrollViewContainer(size: size, data: [],)
+              ],
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: rw(20)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Worship sessions',
+                  textAlign: TextAlign.start,
+                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                      fontWeight: FontWeight.w900,
+                      height: 1,
+                      fontSize: rh(15),
+                      color: Theme.of(context).primaryColor),
+                ),
+                //Sermon scrollview
+                ScrollViewContainer(size: size, data: [],)
               ],
             ),
           ),

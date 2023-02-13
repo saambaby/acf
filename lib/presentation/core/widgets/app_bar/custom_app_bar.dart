@@ -74,8 +74,8 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
                 if (hasBackButton)
                   Align(
                     alignment: Alignment.centerLeft,
-                    child: GestureDetector(
-                      onTap: onBackTap ?? () => Navigation.pop(context),
+                    child: CupertinoButton(
+                      onPressed: onBackTap ?? () => Navigation.pop(context),
                       child: Row(
                         children: [
                           const AppBarIcon(
@@ -122,11 +122,16 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
                           semanticLabel: 'Account',
                         ),
                         SizedBox(width: rw(space3x)),
-                        CIcons.fromMaterial(
-                          size: 25,
-                          color: Colors.white,
-                          icon: CupertinoIcons.chat_bubble_2,
-                          semanticLabel: 'Chats',
+                        GestureDetector(
+                          onTap: (){
+
+                          },
+                          child: CIcons.fromMaterial(
+                            size: 25,
+                            color: Colors.white,
+                            icon: CupertinoIcons.chat_bubble_2,
+                            semanticLabel: 'Chats',
+                          ),
                         ),
                       ],
                     ),
@@ -165,3 +170,5 @@ class AppBarIcon extends StatelessWidget {
     );
   }
 }
+
+

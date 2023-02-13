@@ -1,9 +1,12 @@
-import 'package:acf/presentation/connect/connect.dart';
 import 'package:acf/presentation/core/widgets/app_bar/custom_app_bar.dart';
 import 'package:acf/presentation/featured/featured.dart';
+
+import 'package:acf/presentation/give/give.dart';
 import 'package:acf/presentation/home/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../feed/feeds.dart';
 
 class PageWrapper extends StatefulWidget {
   const PageWrapper({super.key});
@@ -43,8 +46,25 @@ class _PageWrapperState extends State<PageWrapper> {
           controller: pageController,
           physics: const NeverScrollableScrollPhysics(),
           onPageChanged: pageChanged,
-          children: const [Home(), Featured(), Connect()],
+          children: const [Home(), Feeds(),Featured(), Give()],
         ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.redAccent, //Floating action button on
+          // Scaffold
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const Home(),
+                ));
+          },
+          child: const Icon(
+            CupertinoIcons.add_circled,
+            color: Colors.white,
+            size: 25,
+          ), //icon inside button
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
             color: Colors.white,
             elevation: 5.0,
@@ -64,35 +84,28 @@ class _PageWrapperState extends State<PageWrapper> {
                             ? Theme.of(context).primaryColor
                             : Theme.of(context).hintColor)),
                 bottomAppBarItem(
-                    'Featured',
+                    'Feeds',
                     1,
                     _selectedIndex,
-                    Icon(CupertinoIcons.layers,
+                    Icon(Icons.feed_outlined,
                         size: 25,
                         color: _selectedIndex == 1
                             ? Theme.of(context).primaryColor
                             : Theme.of(context).hintColor)),
                 bottomAppBarItem(
-                    'Connect',
+                    'Featured',
                     2,
                     _selectedIndex,
-                    Icon(CupertinoIcons.person_2,
+                    Icon(CupertinoIcons.layers,
                         size: 25,
                         color: _selectedIndex == 2
                             ? Theme.of(context).primaryColor
                             : Theme.of(context).hintColor)),
-                bottomAppBarItem(
-                    'Pastor Chat',
-                    3,
-                    _selectedIndex,
-                    Icon(CupertinoIcons.chat_bubble,
-                        size: 25,
-                        color: _selectedIndex == 3
-                            ? Theme.of(context).primaryColor
-                            : Theme.of(context).hintColor)),
+
+
                 bottomAppBarItem(
                     'Give',
-                    4,
+                    3,
                     _selectedIndex,
                     Icon(CupertinoIcons.money_dollar_circle,
                         size: 25,
@@ -131,12 +144,12 @@ class _PageWrapperState extends State<PageWrapper> {
           children: [
             _selectedIndex == index
                 ? Container(
-                    width: 10, height: 3, color: Theme.of(context).primaryColor)
+                width: 10, height: 3, color: Theme.of(context).primaryColor)
                 : const SizedBox.shrink(),
             Container(
               margin: const EdgeInsets.all(5),
               height: 30,
-              width: 40.5,
+              width: 35,
               child: icon,
             ),
             Text(

@@ -75,12 +75,13 @@ class Buttons {
       ),
       onPressed: isDisabled || isLoading ? () {} : onPressed,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             text.toUpperCase(),
             style: Theme.of(context).textTheme.button,
           ),
+          SizedBox(width: rh(5),),
           if (isLoading)
             const FittedBox(child: CircularProgressIndicator())
           else

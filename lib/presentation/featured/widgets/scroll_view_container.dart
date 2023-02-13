@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 class ScrollViewContainer extends StatefulWidget {
   final Size size;
-  const ScrollViewContainer({super.key, required this.size});
+  final List<String> data;
+  const ScrollViewContainer({super.key, required this.size, required this.data});
 
   @override
   State<ScrollViewContainer> createState() => _ScrollViewContainerState();
