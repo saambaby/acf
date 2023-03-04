@@ -20,7 +20,7 @@ class _FeaturedState extends State<Featured> {
         children: [
           Container(
             padding: EdgeInsets.only(top: rh(50)),
-            color: Colors.black,
+            color: Theme.of(context).primaryColor,
             height: rh(size.height * .4),
             width: double.infinity,
             child: Column(
@@ -29,10 +29,10 @@ class _FeaturedState extends State<Featured> {
                 Text(
                   'WELCOME \n TO  WEEKLY \n SERVICE!',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                       fontWeight: FontWeight.w900,
                       height: .8,
-                      fontSize: rh(45),
+                      fontSize: rf(40),
                       color: Colors.white),
                 ),
                 SizedBox(
@@ -41,7 +41,7 @@ class _FeaturedState extends State<Featured> {
                 Text(
                   'Streaming Sundays at 7PM',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                       fontWeight: FontWeight.w900,
                       fontSize: 15,
                       color: Colors.white),
@@ -52,7 +52,7 @@ class _FeaturedState extends State<Featured> {
                 Text(
                   'On Demand. \n Anytime. Anywhere',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       fontWeight: FontWeight.w500,
                       height: .8,
                       fontSize: 13,
@@ -70,7 +70,7 @@ class _FeaturedState extends State<Featured> {
                 Text(
                   'Recent Church Services',
                   textAlign: TextAlign.start,
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontWeight: FontWeight.w900,
                       height: 1,
                       fontSize: rh(15),
@@ -83,7 +83,7 @@ class _FeaturedState extends State<Featured> {
           ),
           Container(
             padding: EdgeInsets.only(top: rh(50)),
-            color: Colors.black,
+            color: Theme.of(context).primaryColor,
             height: rh(size.height * .4),
             width: double.infinity,
             child: Column(
@@ -92,10 +92,10 @@ class _FeaturedState extends State<Featured> {
                 Text(
                   'New \n Message \n Every Sunday!',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                       fontWeight: FontWeight.w900,
                       height: .8,
-                      fontSize: rh(45),
+                      fontSize: rf(40),
                       color: Colors.white),
                 ),
                 SizedBox(
@@ -104,9 +104,9 @@ class _FeaturedState extends State<Featured> {
                 Text(
                   'Every Sundays at 6AM',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                       fontWeight: FontWeight.w900,
-                      fontSize: 15,
+                      fontSize: rf(15),
                       color: Colors.white),
                 ),
                 SizedBox(
@@ -115,10 +115,10 @@ class _FeaturedState extends State<Featured> {
                 Text(
                   'On Demand. \n Anytime. Anywhere',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       fontWeight: FontWeight.w500,
                       height: .8,
-                      fontSize: 13,
+                      fontSize: rf(13),
                       color: Colors.white),
                 ),
               ],
@@ -133,7 +133,7 @@ class _FeaturedState extends State<Featured> {
                 Text(
                   'Recent Sunday School Messages',
                   textAlign: TextAlign.start,
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontWeight: FontWeight.w900,
                       height: 1,
                       fontSize: rh(15),
@@ -152,10 +152,10 @@ class _FeaturedState extends State<Featured> {
                 Text(
                   'Recent Acf Youth Messages',
                   textAlign: TextAlign.start,
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontWeight: FontWeight.w900,
                       height: 1,
-                      fontSize: rh(15),
+                      fontSize: rf(15),
                       color: Theme.of(context).primaryColor),
                 ),
                 //Sermon scrollview
@@ -171,10 +171,10 @@ class _FeaturedState extends State<Featured> {
                 Text(
                   'Worship sessions',
                   textAlign: TextAlign.start,
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontWeight: FontWeight.w900,
                       height: 1,
-                      fontSize: rh(15),
+                      fontSize: rf(15),
                       color: Theme.of(context).primaryColor),
                 ),
                 //Sermon scrollview

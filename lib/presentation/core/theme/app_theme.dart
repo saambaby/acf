@@ -5,32 +5,32 @@ import 'package:flutter/material.dart';
 import '../utils/utils.dart';
 
 class AppTheme {
-  static const Color _scaffoldColorLight = Color(0xfff5f5f5);
+  static const Color _scaffoldColor = Color(0xfff5f5f5);
 
-  static const Color _primaryColorLight = Color(0xff000000);
+  static const Color _primaryColor = Color(0xff2A2939);
   static const Color _buttonColor = Color(0xffF05454);
 
-  static const Color _secondaryColorLight = Color(0xff30475E);
+  static const Color _secondaryColor = Color(0xff30475E);
 
-  static const Color _errorColorLight = Color(0xffb00020);
+  static const Color _errorColor = Color(0xffb00020);
 
   static ThemeData light() {
     return ThemeData.light().copyWith(
-      primaryColor: _primaryColorLight,
+      primaryColor: _primaryColor,
       primaryColorDark: _buttonColor,
-      primaryColorLight: _primaryColorLight,
-      errorColor: _errorColorLight,
-      scaffoldBackgroundColor: _scaffoldColorLight,
+      primaryColorLight: _primaryColor,
+      errorColor: _errorColor,
+      scaffoldBackgroundColor: _scaffoldColor,
       disabledColor: Colors.white.withOpacity(0.15),
       progressIndicatorTheme: const ProgressIndicatorThemeData(
         color: Colors.white,
       ),
       colorScheme: const ColorScheme.light().copyWith(
-        primary: _primaryColorLight,
-        primaryVariant: _primaryColorLight,
-        secondary: _secondaryColorLight,
-        secondaryVariant: _scaffoldColorLight,
-        error: _errorColorLight,
+        primary: _primaryColor,
+        primaryVariant: _primaryColor,
+        secondary: _secondaryColor,
+        secondaryVariant: _scaffoldColor,
+        error: _errorColor,
       ),
       textTheme: TextTheme(
         headline1: TextStyle(

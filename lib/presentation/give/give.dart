@@ -18,7 +18,7 @@ class Give extends StatelessWidget {
             children: [
               Container(
                 padding: EdgeInsets.only(top: rh(50)),
-                color: Colors.black,
+                color: Theme.of(context).primaryColor,
                 height: rh(size.height * .4),
                 width: double.infinity,
                 child: Column(
@@ -59,11 +59,11 @@ class Give extends StatelessWidget {
                       Text(
                         'Enter your amount',
                         textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                             fontWeight: FontWeight.w900,
                             height: 2,
-                            fontSize: rh(15),
-                            color: Colors.black),
+                            fontSize: rf(15),
+                            color: Theme.of(context).primaryColor),
                       ),
                       SizedBox(
                         height: rh(5),
@@ -71,13 +71,13 @@ class Give extends StatelessWidget {
                       TextFormField(
                         textAlign: TextAlign.center,
                         keyboardType: TextInputType.number,
-                        style:  Theme.of(context).textTheme.bodyText1?.copyWith(
+                        style:  Theme.of(context).textTheme.bodyMedium?.copyWith(
                             fontWeight: FontWeight.w700,
                             fontSize: rh(15),
-                            color: Colors.black),
+                            color: Theme.of(context).primaryColor),
                         decoration: InputDecoration(
                             border: InputBorder.none,
-                            errorStyle: Theme.of(context).textTheme.bodyText1?.copyWith(
+                            errorStyle: Theme.of(context).textTheme.bodySmall?.copyWith(
                                 color: Colors.red,
                                 fontSize: 11,
                                 fontWeight: FontWeight.w400),
@@ -92,7 +92,7 @@ class Give extends StatelessWidget {
                       Text(
                         'Other ways to give',
                         textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
                             fontWeight: FontWeight.w400,
                             fontSize: 10,
                             color: Theme.of(context).hintColor),
@@ -102,7 +102,7 @@ class Give extends StatelessWidget {
                       ),
                       Buttons.expandedWithIcon(
                           context: context,
-                          backgroundColor: Colors.black,
+                          backgroundColor: Theme.of(context).primaryColor,
                           text: 'Apple Pay',
                           borderRadius: 10,
                           vPadding: space1x,
@@ -113,7 +113,7 @@ class Give extends StatelessWidget {
                       ),
                       Buttons.expandedWithIcon(
                           context: context,
-                          backgroundColor: Colors.black,
+                          backgroundColor: Theme.of(context).primaryColor,
                           text: 'Google Pay',
                           borderRadius: 10,
                           vPadding: space1x,
@@ -128,7 +128,7 @@ class Give extends StatelessWidget {
               ),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                color: Colors.black.withOpacity(.9),
+                color: Theme.of(context).primaryColor,
                 height: rh(size.height * .4),
                 width: double.infinity,
                 child: Column(
@@ -137,7 +137,7 @@ class Give extends StatelessWidget {
                     Text(
                       'Generosity in action',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontWeight: FontWeight.w900,
                           height: .8,
                           fontSize: rh(20),

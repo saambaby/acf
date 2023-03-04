@@ -7,10 +7,11 @@ import '../../core/utils/size_config.dart';
 class UserAvatar extends StatelessWidget {
   const UserAvatar({
     super.key,
-    required this.isMe,
+    required this.isMe, required this.imgUrl,
   });
 
   final bool isMe;
+  final String imgUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +38,9 @@ class UserAvatar extends StatelessWidget {
           width: rw(50),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(60),
-              image:const  DecorationImage(
+              image:  DecorationImage(
                   fit:BoxFit.cover,
-                  image: NetworkImage("https://picsum.photos/536/354")
+                  image: NetworkImage(imgUrl)
               ),
               border: !isMe? Border.all(color:Colors.white, width: 3):Border.all(width: 0)
           ),
@@ -52,7 +53,7 @@ class UserAvatar extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(60),
                   color: Colors.redAccent,
-                  border:Border.all(color:Colors.black, width: 3)
+                  border:Border.all(color:Colors.white, width: 3)
               ),
               child:const Icon(Icons.add, size: 15 , color: Colors.white,)
           ),

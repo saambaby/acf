@@ -11,6 +11,7 @@ class ScrollViewTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 10),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
             height: rh(130),
@@ -24,8 +25,8 @@ class ScrollViewTile extends StatelessWidget {
           ),
           Text(
             title,
-            textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.bodyText1?.copyWith(
+            textAlign: TextAlign.start,
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                 fontWeight: FontWeight.w400,
                 fontSize: 10,
                 color: Theme.of(context).hintColor),

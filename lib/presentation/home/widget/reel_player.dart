@@ -62,11 +62,12 @@ class _ReelPlayerState extends State<ReelPlayer>
                 Text(
                   widget.video.title,
                   textAlign: TextAlign.center,
-                  maxLines: 1,
+                  maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                       fontWeight: FontWeight.w900,
-                      fontSize: 30,
+                      fontSize: rf(25),
+                      height: 1,
                       color: Theme.of(context).primaryColor),
                 ),
                 const SizedBox(height: 10),
@@ -75,7 +76,7 @@ class _ReelPlayerState extends State<ReelPlayer>
                   textAlign: TextAlign.center,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       fontWeight: FontWeight.w500,
                       fontSize: 13,
                       color: Theme.of(context).hintColor),
@@ -89,7 +90,7 @@ class _ReelPlayerState extends State<ReelPlayer>
                       child: Buttons.icon(
                         context: context,
                         icon: CupertinoIcons.share,
-                        iconColor: Colors.black, semanticLabel: 'share',
+                        iconColor: Theme.of(context).primaryColor, semanticLabel: 'share',
                         onPressed: () {  },
                       ),
                     ),
@@ -118,7 +119,7 @@ class _ReelPlayerState extends State<ReelPlayer>
                       child: Buttons.icon(
                         context: context,
                         icon: CupertinoIcons.heart,
-                        iconColor: Colors.black, semanticLabel: 'like', onPressed: () {  },
+                        iconColor: Theme.of(context).primaryColor, semanticLabel: 'like', onPressed: () {  },
                       ),
                     ),
                   ],

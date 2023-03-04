@@ -45,9 +45,10 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   Widget build(BuildContext context) {
     return Hero(
       tag: isHeroAnimated ? 'app_bar' : 'no_hero_animation',
+
       child: Container(
         width: double.infinity,
-        color: isTransparent ? Colors.transparent : Colors.black,
+        color: isTransparent ? Colors.transparent : Theme.of(context).primaryColor,
         padding: EdgeInsets.only(
           top: rh(50),
           left: space3x,
@@ -147,7 +148,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size(double.infinity, 40);
+  Size get preferredSize => const Size(double.infinity, 50);
 }
 
 class AppBarIcon extends StatelessWidget {
